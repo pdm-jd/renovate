@@ -25,7 +25,7 @@ export async function updateArtifacts({
   newPackageFileContent,
   config,
 }: UpdateArtifact): Promise<UpdateArtifactsResult[] | null> {
-  logger.debug(`mix.getArtifacts(${packageFileName})`);
+  logger.info(`mix.getArtifacts(${packageFileName})`);
   if (updatedDeps.length < 1) {
     logger.debug('No updated mix deps - returning null');
     return null;
